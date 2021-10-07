@@ -18,6 +18,7 @@ const connection = mysql.createPool({
 });
 
 
+
 // Route
 app.get('/', (req, res) => {
   res.send('Welcome to my API!');
