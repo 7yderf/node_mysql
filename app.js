@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // MySql
-const connection = mysql.createPool({
+const connection = mysql.createConnection({
   host: 'us-cdbr-east-04.cleardb.com',
   user: 'b6017055d4a0ff',
   password: 'a79b6643',
@@ -85,10 +85,10 @@ app.delete('/delete/:id', (req, res) => {
     if (error) throw error;
     res.send('Delete customer');
   });
-}); 
+});
 
 // Check connect
-connection.getConnection(error => {
+connection.connect(error => {
   if (error) throw error;
   console.log('Database server running!');
 });
