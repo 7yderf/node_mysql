@@ -10,14 +10,14 @@ const app = express();
 app.use(bodyParser.json());
 
 // MySql
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
   host: 'us-cdbr-east-04.cleardb.com',
   user: 'b6017055d4a0ff',
   password: 'a79b6643',
   database: 'heroku_cb75fcac67db9c1'
 });
 
-
+module.exports = connection;
 
 // Route
 app.get('/', (req, res) => {
