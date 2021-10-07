@@ -17,7 +17,7 @@ const connection = mysql.createPool({
   database: 'heroku_cb75fcac67db9c1'
 });
 
-
+connection.getConnection();
 
 // Route
 app.get('/', (req, res) => {
