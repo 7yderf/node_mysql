@@ -17,12 +17,7 @@ const connection = mysql.createConnection({
   database: 'heroku_cb75fcac67db9c1'
 });
 
-connection.connect(function(error){
-  if(!!error) console.log(error);
-   else console.log('SQL Database Connected!');
-});
 
-module.exports = connection;
 
 // Route
 app.get('/', (req, res) => {
