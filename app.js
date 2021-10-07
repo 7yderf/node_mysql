@@ -85,6 +85,7 @@ app.delete('/delete/:id', (req, res) => {
   connection.query(sql, error => {
     if (error) throw error;
     res.send('Delete customer');
+    
   });
 });
 
