@@ -85,7 +85,7 @@ app.delete('/delete/:id', (req, res) => {
     if (error) throw error;
     res.send('Delete customer');
   });
-});
+}); 
 
 // Check connect
 connection.getConnection(error => {
