@@ -78,6 +78,7 @@ app.put('/update/:id', (req, res) => {
   });
 });
 
+
 app.delete('/delete/:id', (req, res) => {
   const { id } = req.params;
   const sql = `DELETE FROM customers WHERE id= ${id}`;
@@ -85,7 +86,7 @@ app.delete('/delete/:id', (req, res) => {
   connection.query(sql, error => {
     if (error) throw error;
     res.send('Delete customer');
-    
+
   });
 });
 
