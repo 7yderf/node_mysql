@@ -1,6 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
-const dbConfig = require("./db.config.js");
+const dbConfig = require('./db.config');
 
 const bodyParser = require('body-parser');
 
@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // MySql
-var connection = mysql.createPool({
+const connection = mysql.createPool({
   host: dbConfig.HOST,
   user: dbConfig.USER,
   password: dbConfig.PASSWORD,
