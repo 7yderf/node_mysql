@@ -18,12 +18,12 @@ const connection = mysql.createPool({
   database: dbConfig.DB
 });
 
-module.exports = connection;
+// module.exports = connection;
 
 // Route
-// app.get('/', (req, res) => {
-//   res.send('Welcome to my API!');
-// });
+app.get('/', (req, res) => {
+  res.send('Welcome to my API!');
+});
 
 // all customers
 app.get('/customers', (req, res) => {
