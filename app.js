@@ -20,9 +20,9 @@ const connection = mysql.createPool({
 
 
 // Route
-setInterval (app.get('/', (req, res) => {
-  res.send('Welcome to my API!');
-},2000));
+app.get('/', (req, res) => {
+   setInterval(res.send('Welcome to my API!'), 2000) ;
+});
 
 // all customers
 app.get('/customers', (req, res) => {
@@ -64,7 +64,7 @@ app.post('/add', (req, res) => {
     if (error) throw error;
 
     res.send('Customer created!');
-
+    
   });
 });
 
