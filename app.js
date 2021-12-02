@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // MySql
-const connection = mysql.createPool({
+const connection = mysql.createConnection({
   host: 'us-cdbr-east-04.cleardb.com',
   user: 'b6017055d4a0ff',
   password: 'a79b6643',
