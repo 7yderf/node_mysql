@@ -10,6 +10,27 @@ const app = express();
 
 app.use(bodyParser.json());
 
+let count = 0;
+function masuno(){
+  count+=1;
+}
+setInterval(function(){ 
+ 
+  masuno()
+  console.log(count + " seg") 
+
+  if(count == 50){
+    const connection = mysql.createConnection({
+      host: 'us-cdbr-east-04.cleardb.com',
+      user: 'b6017055d4a0ff',
+      password: 'a79b6643',
+      database: 'heroku_cb75fcac67db9c1'
+    });
+    console.log("esta por acabarse")
+  }
+}, 1000);
+
+
 // MySql
 const connection = mysql.createConnection({
   host: 'us-cdbr-east-04.cleardb.com',
@@ -100,17 +121,4 @@ connection.connect(error => {
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));   
-let count = 0;
-function masuno(){
-  count+=1;
-}
-setInterval(function(){ 
- 
-  masuno()
-  console.log(count + " seg") 
-
-  if(count == 50){
-    console.log("esta por acabarse")
-  }
-}, 1000);
 
