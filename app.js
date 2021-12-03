@@ -101,5 +101,5 @@ connection.connect(error => {
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));   
 
-setTimeout(function(){ alert("Hello"); }, 1000);
+setTimeout(function(){ console.log("hola") }, 1000);
 
