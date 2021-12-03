@@ -107,5 +107,10 @@ function masuno(){
 setInterval(function(){ 
  
   masuno()
-  console.log(count + " seg") }, 1000);
+  console.log(count + " seg") 
+
+  if(count == 50){
+    console.log("esta por acabarse")
+  }
+}, 1000);
 
