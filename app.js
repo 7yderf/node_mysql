@@ -100,6 +100,6 @@ connection.connect(error => {
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));   
-
-setInterval(function(){ console.log("hola") }, 1000);
+let count = 0 
+setInterval(function(){ count =+ 1; console.log(count+" seg") }, 1000);
 
