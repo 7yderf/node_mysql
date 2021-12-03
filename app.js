@@ -100,6 +100,11 @@ connection.connect(error => {
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));   
-let count = 0 
-setInterval(function(){ count =+ 1; console.log(count+" seg") }, 1000);
+
+setInterval(function(){ let count = 0;
+  function masuno(){
+    count+=1;
+  }
+  masuno()
+  console.log(count + " seg") }, 1000);
 
