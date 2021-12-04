@@ -15,7 +15,7 @@ let users = [
 app.get('/', (request, response) => {
     response.send('<h1>Servidor con express</h1>')
 })
-
+ 
 app.get('/api/users', (request, response) => {
     response.json(users)
 })
