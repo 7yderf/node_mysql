@@ -14,16 +14,16 @@ const app = express();
 
 app.use(bodyParser.json());
 
-let count = 0;
-function masuno(){
-  count+=1;
-}
-setInterval(function(){ 
+// let count = 0;
+// function masuno(){
+//   count+=1;
+// }
+// setInterval(function(){ 
  
-  masuno()
-  console.log(count + " seg") 
+//   masuno()
+//   console.log(count + " seg") 
 
-  if(count == 50){
-    console.log("esta por acabarse")
-  }
-}, 1000);
+//   if(count == 50){
+//     console.log("esta por acabarse")
+//   }
+// }, 1000);
