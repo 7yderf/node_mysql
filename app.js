@@ -27,10 +27,10 @@ setInterval(function(){
 
 // MySql
 const connection = mysql.createConnection({
-  host: 'us-cdbr-east-04.cleardb.com',
-  user: 'b6017055d4a0ff',
-  password: 'a79b6643',
-  database: 'heroku_cb75fcac67db9c1'
+  host: 'disfrutadetusrentas.com',
+  user: 'disfrutarentas_vla',
+  password: '1ngrav1T',
+  database: 'disfrutarentas_cust'
 });
 
 
